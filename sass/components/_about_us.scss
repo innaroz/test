@@ -1,0 +1,26 @@
+.works {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
+.works__item {
+  position: relative;
+}
+
+.works__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.works__description {
+  position: absolute;
+  padding: 27px 0;
+  background: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}

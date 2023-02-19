@@ -1,0 +1,154 @@
+.js-open-menu {
+  border: none;
+  background: transparent;
+
+  path { fill: var(--title-text-color); }
+
+  &:hover, &:focus {
+    path { fill: var(--accent-color); }
+  }
+}
+
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu .link {
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu .link:hover,
+.menu .link:focus {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  margin-left: auto;
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: var(--primary-white-color);
+  z-index: 999;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--title-text-color);
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  color: #212121;
+
+  &--active {
+    color: #2196F3;
+  }
+
+  &--number {
+    color: #2196F3;
+    font-size: 34px;
+  }
+
+  &--email {
+    font-size: 24px;
+    color: #757575;
+  }
+
+  &:hover, &:focus {
+    color: #2196F3;
+  }
+}
+
+.mobile-menu__item {
+  &:not(:first-child) {
+    margin-top: 32px;
+  }
+}
+
+.mobile-social {
+  margin-top: 64px;
+}
+
+.mobile-social__item {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+
+  &:not(:last-child) {
+    &:after {
+      content: '';
+      height: 100%;
+      width: 1px;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgba(33, 33, 33, 0.2);
+    }
+  }
+
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.mobile-social__link {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2196F3;
+  text-decoration: none;
+}
